@@ -28,7 +28,7 @@ namespace ConsoleApplication4
         public string lastName
         {
             get { return lName;}
-            set { lName = value == "" ? "n/a" : value;}
+            set { lName = value == "" ? "n/a" : value; }
         }
     }
 }

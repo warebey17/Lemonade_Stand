@@ -11,8 +11,6 @@ namespace ConsoleApplication4
         public store(int number, string description, double price, int quantity)
         {
 
-
-
         }
 
     }

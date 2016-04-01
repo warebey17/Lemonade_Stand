@@ -12,6 +12,7 @@ namespace ConsoleApplication4
 
         public int decisionToPlay;
 
+
         public game()
         {
         }
@@ -49,10 +50,6 @@ namespace ConsoleApplication4
             Thread.Sleep(4000);
             Environment.Exit(0);
           }
-
-
-
-
             {
                 weather Weather = new weather();
 
@@ -62,6 +59,7 @@ namespace ConsoleApplication4
                 Console.WriteLine(now.ToString("dddd") + "'s forecast is " + Weather.GetWeather() + " with a high of " + Weather.GetTemperature() + "°");
                 Console.WriteLine("The demand for lemonade is " + Weather.GetLemonadeDemand() + "%");
                 Console.WriteLine(" ");
+                Console.WriteLine("You have $20.00 in your wallet to start!  Good Luck!");
             }
 
             Console.Write("Please enter your FIRST NAME: \n");
@@ -70,25 +68,35 @@ namespace ConsoleApplication4
             Console.Write("Please enter your LAST NAME: \n");
             string lastName = Console.ReadLine();
 
-            Console.Write("Enter your option for ICE: (a. 100 @ .86, b. 250 @ 2.10, c. 500 @ 3.50)\n");
+            Console.Write("Enter your option for ICE: (1. 100 for .86, 2. 250 for 2.10, 3. 500 for 3.50)\n");
             string ice = Console.ReadLine();
 
-            Console.Write("Enter your option for LEMONS: (a. 10 @ .97, b. 30 @ 2.48, c. 75 @ 4.32)\n");
+
+
+            Console.Write("Enter your option for LEMONS: (1. 10 for .97, 2. 30 for 2.48, 3. 75 for 4.32)\n");
             string lemons = Console.ReadLine();
 
-            Console.Write("Enter your option for SUGAR: (a. 8 @ .73, b. 20 @ 1.71, c. 48 @ 3.33)\n");
+
+
+            Console.Write("Enter your option for SUGAR: (1. 8 for .73, 2. 20 for 1.71, 3. 48 for 3.33)\n");
             string sugar = Console.ReadLine();
 
-            Console.Write("Enter your option for CUPS: (a. 25 @ .78, b. 50 @ 1.53, c. 100 @ 2.84)\n");
+
+
+            Console.Write("Enter your option for CUPS: (1. 25 for .78, 2. 50 for 1.53, 3. 100 for 2.84)\n");
             string cups = Console.ReadLine();
+
+
 
             var Player = new player(firstName, lastName);
 
-            Console.WriteLine("Hello {0} {1}", Player.firstName, Player.lastName);
+            Console.WriteLine("Hello {0} {1}. Your purchase total is below.\n", Player.firstName, Player.lastName);
 
-            //Console.WriteLine("You bought")
-            //Console.WriteLine("You bought")
-            //Console.WriteLine("You bought")
+            ice Ice = new ice(); Console.WriteLine("Ice purchased total: " + Ice.buyIce());
+            cups Cups = new cups(); Console.WriteLine("Cups purchased total: " + Cups.buyCups());
+            lemon Lemon = new lemon(); Console.WriteLine("Lemon purchase total: " + Lemon.buyLemon());
+            sugar Sugar = new sugar(); Console.WriteLine("Sugar purchase total: " +Sugar.buySugar());
+
             //Console.WriteLine("You bought")
 
         }

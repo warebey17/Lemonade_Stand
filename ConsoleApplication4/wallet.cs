@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication4
 {
-    class day 
+    class wallet
     {
-        
 
 
     }
 }
-  
